@@ -1,6 +1,7 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+"use strict";
 
  var bio = {
     "name": "John doe",
@@ -27,13 +28,13 @@ var work = {
             "description": "Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text",
         },
         {
-            "position": "Consultant",
+            "title": "Consultant",
             "employer": "Nice Web",
             "dates": "2005- 2009",
             "location": "NYC, NY",
             "description": "Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text",
         },
-    ]
+    ],
 };
 
 var education =
@@ -54,7 +55,7 @@ var education =
             "majors":["CS", "Business Managment"],
             "dates":"1990-1994",
             "url": "http://www.tau.edu"
-        }
+        },
 ],
     "onlineCourses": [
         {
@@ -69,7 +70,7 @@ var education =
             "dates": "2016-2017",
             "url": "http://www.udacity.com",
         },
-    ]
+    ],
 };
 
 var projects =
@@ -86,8 +87,8 @@ var projects =
             "dates": "2015",
             "description": " La la La la La la La la La la La la La la La la La la La la La la La la La la La la La la La la La la La la",
             "images" : ["images/fry.jpg"]
-        }
-    ]
+        },
+    ],
 };
 
 projects.display =  function()
@@ -145,7 +146,7 @@ work.display = function()
         });
     };
 
-}
+};
 
 education.display = function()
 // format and display the Education object
@@ -154,7 +155,7 @@ education.display = function()
     {
 
         education.schools.forEach( function (school) {
-            $("#education").append(HTMLschoolStart)
+            $("#education").append(HTMLschoolStart);
             var FormattedschoolName =
             HTMLschoolName.replace("%data%", school.name);
             var FormattedschoolDegree =
